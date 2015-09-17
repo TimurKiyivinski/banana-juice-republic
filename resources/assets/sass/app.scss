@@ -1,0 +1,20 @@
+// Import Twitter Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$body-padding: 70px;
+$navbar-logo-height: 36px;
+
+body
+{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: $body-padding;
+    padding-bottom: $body-padding;
+}
+
+.navbar-logo
+{
+    height: $navbar-logo-height;
+    margin-top: -10px;
+}

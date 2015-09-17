@@ -1,0 +1,24 @@
+# Default
+/vendor
+/node_modules
+/storage/debugbar/
+Homestead.yaml
+Homestead.json
+.env
+*~
+.*~
+
+# on_cd script
+.on_cd
+.on_cd_lock
+
+# Vim swap files
+*.sw*
+
+# Compiled and vendor files
+/public/css/
+/public/js/
+/public/fonts/
+
+# Images
+/public/images/
