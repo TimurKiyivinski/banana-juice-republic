@@ -16,7 +16,7 @@
     --}}
     <div class="row">
         <div class="page-header">
-            <h1>Society for Design and Innovation Technology<small>A little about us</small></h1>
+            <h1>Society for Design and Innovation Technology <small>A little about us</small></h1>
         </div>
     </div>
     <div class="row">
@@ -27,7 +27,7 @@
     </div>
     <div class="row">
         <div class="page-header">
-            <h1>Bookings<small>Make your reservation today</small></h1>
+            <h1>Bookings <small>Make your reservation today</small></h1>
         </div>
         <div class="col-xs-12 col-sm-4">
             <div class="panel panel-default" data-toggle="modal" data-target="#registrationModal">
@@ -53,7 +53,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <a href="{{ URL::to('/register') }}" class="btn btn-primary">Register</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <a href="{{ URL::to('/accommodation') }}" class="btn btn-primary">Book</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <a href="{{ URL::to('/attractions') }}" class="btn btn-primary">Book</a>
                     </div>
                 </div>
             </div>
