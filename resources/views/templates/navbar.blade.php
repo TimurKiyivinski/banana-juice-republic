@@ -9,12 +9,16 @@
         <a class="navbar-brand" href="{{ URL::to('/') }}">
             <img class="navbar-logo" src="{{ asset('images/logo.png') }}"/>
         </a>
-        <a class="navbar-brand" href="{{ URL::to('/') }}">
+        <a class="navbar-brand hidden-xs hidden-sm" href="{{ URL::to('/') }}">
             {{ $title or "Swinburne Conference"}}
         </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
+            <li><a href="{{ URL::to('/') }}">
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            Home
+            </a></li>
             <li><a href="{{ URL::to('/register') }}">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
             Register

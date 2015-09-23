@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row">
         <div class="page-header">
-            <h1>Our conference <small>Details</small>
+            <h1>Accommodation <small>Feel at home</small>
                 <div class="hidden-xs hidden-sm btn-group pull-right">
                     <a href="{{ URL::to('/login') }}" class="btn btn-primary">
-                        Register
+                        Use Registration Token
                     </a>
                     <a href="{{ URL::to('/login') }}" class="btn btn-info">
                         Login with Facebook
@@ -25,7 +25,7 @@
         </div>
         <div class="hidden-md hidden-lg well">
             <a href="{{ URL::to('/login') }}" class="btn btn-primary center-block">
-                Register
+                Use Registration Token
             </a>
             <a href="{{ URL::to('/login') }}" class="btn btn-info center-block">
                 Login with Facebook

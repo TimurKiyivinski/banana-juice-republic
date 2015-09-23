@@ -14,24 +14,39 @@ class MainController extends Controller
      *
      * @return Response
      */
+    public $main_text = "Main Text";
+    public $register_text = "Register Text";
+    public $accommodation_text = "Accommodation Text";
+    public $attraction_text = "Attraction Text";
+
     public function index()
     {
         $data = [];
-        $data['title'] = "Some Conference";
+        $data['title'] = "SDIT International Conference";
+        $data['main_text'] = $this->main_text;
+        $data['register_text'] = $this->register_text;
+        $data['accommodation_text'] = $this->accommodation_text;
+        $data['attraction_text'] = $this->attraction_text;
         return view('index', $data);
     }
 
-    public function login()
+    public function login($type = 0)
     {
         $data = [];
         $data['title'] = "Registration method";
-        return view('login', $data);
+        if ($type == 0)
+            return view('login.facebook', $data);
+        else if ($type == 1)
+            return view('login.token', $data);
+        else
+            return 404;
     }
 
     public function register()
     {
         $data = [];
         $data['title'] = "Conference Registration";
+        $data['text'] = $this->register_text;
         return view('register', $data);
     }
 
@@ -39,6 +54,7 @@ class MainController extends Controller
     {
         $data = [];
         $data['title'] = "Book Accommodation";
+        $data['text'] = $this->accommodation_text;
         return view('accommodation', $data);
     }
 
@@ -53,6 +69,7 @@ class MainController extends Controller
     {
         $data = [];
         $data['title'] = "Book Attraction";
+        $data['text'] = $this->attraction_text;
         return view('attraction', $data);
     }
 

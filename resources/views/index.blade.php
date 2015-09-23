@@ -2,25 +2,13 @@
 
 @section('content')
 <div class="container">
-    {{--
-    <div class="row">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                Some Conference
-            </div>
-            <div class="panel-body">
-                jasfhldsjkahflka
-            </div>
-        </div>
-    </div>
-    --}}
     <div class="row">
         <div class="page-header">
             <h1>Society for Design and Innovation Technology <small>A little about us</small></h1>
         </div>
     </div>
     <div class="row">
-        {{ Lipsum::text() }}
+        {{ $main_text }}
     </div>
     <div class="row">
         <br />
@@ -49,7 +37,7 @@
                         <h4 class="modal-title" id="registrationModalLabel">Register</h4>
                     </div>
                     <div class="modal-body">
-                        {{ Lipsum::text() }}
+                        {{ $register_text }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -77,7 +65,7 @@
                         <h4 class="modal-title" id="accommodationModalLabel">Accommodations</h4>
                     </div>
                     <div class="modal-body">
-                        {{ Lipsum::text() }}
+                        {{ $accommodation_text }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -105,7 +93,7 @@
                         <h4 class="modal-title" id="attractionModalLabel">Attractions</h4>
                     </div>
                     <div class="modal-body">
-                        {{ Lipsum::text() }}
+                        {{ $attraction_text }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
