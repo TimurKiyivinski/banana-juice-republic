@@ -12,10 +12,15 @@
 */
 
 Route::get('/', 'MainController@index');
-Route::get('/login', 'MainController@login');
+Route::get('/login/{type?}/{reference?}', 'MainController@login')
+    ->where('type', '^-*[0-9,\.]+$')
+    ->where('reference', '[A-Za-z\ ]+');
 Route::get('/register', 'MainController@register');
+Route::get('/details', 'MainController@details');
 Route::get('/accommodation', 'MainController@accommodation');
 Route::get('/attraction', 'MainController@attraction');
-Route::get('/accommodations', 'MainController@accomodations');
-Route::get('/attractions', 'MainController@attractions');
+Route::get('/accommodations/{reference?}', 'MainController@accommodations')
+    ->where('reference', '[A-Za-z\ ]+');
+Route::get('/attractions/{reference?}', 'MainController@attractions')
+    ->where('reference', '[A-Za-z\ ]+');
 Route::get('/pay', 'MainController@pay');
