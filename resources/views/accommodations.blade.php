@@ -6,9 +6,10 @@
         <div class="page-header">
             <h1>Our Accommodation picks</h1>
         </div>
+        <div  class="grid js-masonry">
         @foreach($accommodations as $accommodation)
-        <div class="col-xs-12 col-md-6">
-            <div class="panel panel-primary" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
+        <div class="col-xs-12 col-md-6 grid-itea">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="checkbox">
                         <label>
@@ -17,16 +18,19 @@
                         </label>
                     </div>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
                     <div class="col-xs-12 col-md-3">
-                        <img src="{{ $accommodation['photo'] }}" class="img-responsive" alt="Image missing :(">
+                        <img width="300" height="300" src="{{ $accommodation['photo'] }}" class="img-responsive" alt="Image missing :(">
                     </div>
                     <div class="col-xs-12 col-md-9">
-                        {{ $accommodation['text'] }}
+                        {{ substr($accommodation['text'], 0, 60) }}...
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
+        </div>
+        @foreach($accommodations as $accommodation)
         <div class="modal fade" id="accommodationModal-{{ $accommodation['id'] }}" tabindex="-1" role="dialog" aria-labelledby="accommodationModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -35,11 +39,11 @@
                         <h4 class="modal-title" id="accommodationModalLabel">Accommodations</h4>
                     </div>
                     <div class="modal-body">
-                        {{ $accommodation['text_long'] }}
+                        {{ $accommodation['text'] }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="#" class="btn btn-primary">View Page</a>
+                        <a href="{{ $accommodation['url'] }}" class="btn btn-primary">View Page</a>
                     </div>
                 </div>
             </div>
@@ -50,4 +54,7 @@
         </div>
     </div>
 </div>
+@stop
+@section('script_extra')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
 @stop

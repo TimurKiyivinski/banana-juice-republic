@@ -4,11 +4,12 @@
 <div class="container">
     <div class="row">
         <div class="page-header">
-            <h1>Our Accommodation picks</h1>
+            <h1>Our Local Attractions</h1>
         </div>
+        <div  class="grid js-masonry">
         @foreach($attractions as $attraction)
         <div class="col-xs-12 col-md-6">
-            <div class="panel panel-primary" data-toggle="modal" data-target="#attractionModal-{{ $attraction['id'] }}">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="checkbox">
                         <label>
@@ -17,16 +18,19 @@
                         </label>
                     </div>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" data-toggle="modal" data-target="#attractionModal-{{ $attraction['id'] }}">
                     <div class="col-xs-12 col-md-3">
                         <img src="{{ $attraction['photo'] }}" class="img-responsive" alt="Image missing :(">
                     </div>
                     <div class="col-xs-12 col-md-9">
-                        {{ $attraction['text'] }}
+                        {{ substr($attraction['text'], 0, 60) }}...
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
+        </div>
+        @foreach($attractions as $attraction)
         <div class="modal fade" id="attractionModal-{{ $attraction['id'] }}" tabindex="-1" role="dialog" aria-labelledby="attractionModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -35,7 +39,7 @@
                         <h4 class="modal-title" id="attractionModalLabel">Accommodations</h4>
                     </div>
                     <div class="modal-body">
-                        {{ $attraction['text_long'] }}
+                        {{ $attraction['text'] }}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -50,4 +54,7 @@
         </div>
     </div>
 </div>
+@stop
+@section('script_extra')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
 @stop

@@ -24,7 +24,7 @@
                 <span class="pull-right glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </div>
                 <div class="panel-body">
-                    <img src="{{ asset('images/plain.png') }}" class="img-responsive" />
+                    <img src="{{ $img_register }}" class="img-responsive" />
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                 <span class="pull-right glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </div>
                 <div class="panel-body">
-                    <img src="{{ asset('images/plain.png') }}" class="img-responsive" />
+                    <img src="{{ $img_accommodation }}" class="img-responsive" />
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                 <span class="pull-right glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </div>
                 <div class="panel-body">
-                    <img src="{{ asset('images/plain.png') }}" class="img-responsive" />
+                    <img src="{{ $img_attraction }}" class="img-responsive" />
                 </div>
             </div>
         </div>
