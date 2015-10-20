@@ -20,6 +20,7 @@ Route::get('/details', 'MainController@details');
 Route::get('/accommodation', 'MainController@accommodation');
 Route::get('/attraction', 'MainController@attraction');
 Route::get('/transport', 'MainController@transport');
+Route::get('/transports', 'MainController@transports');
 Route::get('/accommodations/{reference?}', 'MainController@accommodations')
     ->where('reference', '[A-Za-z\ ]+');
 Route::get('/attractions/{reference?}', 'MainController@attractions')

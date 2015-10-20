@@ -9,21 +9,16 @@
         <div  class="grid js-masonry">
         @foreach($attractions as $attraction)
         <div class="col-xs-12 col-md-6">
-            <div class="panel panel-primary">
+            <div class="panel panel-primary" data-toggle="modal" data-target="#attractionModal-{{ $attraction['id'] }}">
                 <div class="panel-heading">
-                    {{ $attraction['name'] or "Name" }}
-                    <div class="form-group form-inline">
-                        <label for="textbox-{{ $attraction['id'] }}">
-                        </label>
-                        <input id="textbox-{{ $attraction['id'] }}" class="form-control" type="textbox" placeholder="0">
-                    </div>
+                    <h4>{{ $attraction['name'] or "Name" }}</h4>
                 </div>
-                <div class="panel-body" data-toggle="modal" data-target="#attractionModal-{{ $attraction['id'] }}">
+                <div class="panel-body">
                     <div class="col-xs-12 col-md-3">
                         <img src="{{ $attraction['photo'] }}" class="img-responsive" alt="Image missing :(">
                     </div>
                     <div class="col-xs-12 col-md-9">
-                        {{ substr($attraction['text'], 0, 60) }}...
+                        {{ substr(strip_tags($attraction['text']), 0, 60) }}...
                     </div>
                 </div>
             </div>
@@ -36,14 +31,39 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="attractionModalLabel">Accommodations</h4>
+                        <h4 class="modal-title" id="attractionModalLabel">Attractions</h4>
                     </div>
                     <div class="modal-body">
-                        {{ $attraction['text'] }}
+                        <div id="carousel-{{ $attraction['id'] }}" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                @for($i = 0; $i < count($attraction['photos']); $i++)
+                                <div class="item @if($i == 0) active @endif">
+                                    <img width="100%" src="{{ $attraction['photos'][$i] }}" alt="Image missing">
+                                </div>
+                                @endfor
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-{{ $attraction['id'] }}" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-{{ $attraction['id'] }}" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <br />
+                        {!! $attraction['text'] !!}
+                        <br />
+                        <small>*Pricing: RM {{ $attraction['cost'] }} per person.</small>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="#" class="btn btn-primary">View Page</a>
+                        <div class="form-group form-inline">
+                            <label for="textbox-{{ $attraction['id'] }}" >Reservations</label>
+                            <input id="textbox-{{ $attraction['id'] }}" type="text" class="form-control" placeholder="0"></input>
+                            <a href="{{ $attraction['url'] }}" class="btn btn-primary">View Page</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,7 +74,4 @@
         </div>
     </div>
 </div>
-@stop
-@section('script_extra')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
 @stop

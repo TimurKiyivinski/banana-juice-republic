@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Lipsum;
 
 class MainController extends Controller
 {
@@ -48,9 +47,9 @@ class MainController extends Controller
             $data['r_name'] = "Accommodations";
             $data['r_url'] = url('/accommodations', 'accommodation');
             break;
-        case "accommodation":
+        case "transport":
             $data['r_name'] = "Transportation";
-            $data['r_url'] = url('/transports', 'transport');
+            $data['r_url'] = url('/transports');
             break;
         case "details":
             $data['r_name'] = "Accommodations";
@@ -108,15 +107,14 @@ class MainController extends Controller
 
         $accommodation = [];
         $accommodation['id'] = 0;
-        $accommodation['name'] = "";
-        $accommodation['text'] = "";
-        $accommodation['cost'] = "";
-        $accommodation['photo'] = "";
-        $accommodation['url'] = "";
+        $accommodation['name'] = "Pullman Superior Suite";
+        $accommodation['text'] = "With 38 sqm of space, the Superior Room is perfect for two adults and offer guests both comfort and privacy. Among the features are LCD TV, an efficient working desk for business guests, a high speed internet access, Bath Tub with Exclusive Bathroom Amenities and Separate Rain Forest Shower.";
+        $accommodation['cost'] = "310";
+        $accommodation['people'] = "2";
+        $accommodation['photo'] = asset('images/pull0.jpg');
+        $accommodation['photos'] = [0 => asset('images/pull0.jpg'), 1 => asset('images/pull1.jpg'), 2 => asset('images/pull2.jpg')];
+        $accommodation['url'] = "http://www.pullmankuching.com/rooms-suites/superior/";
         $accommodations[] = $accommodation;
-
-        $text = Lipsum::short()->text(1);
-        $text = Lipsum::text();
 
         $data['accommodations'] = $accommodations;
         // Use reference to determine redirect
@@ -152,15 +150,13 @@ class MainController extends Controller
         $attractions = [];
 
         $attraction['id'] = 0;
-        $attraction['name'] = "Name";
-        $attraction['text'] = "";
-        $attraction['cost'] = "";
-        $attraction['photo'] = "";
-        $attarction['url'] = "";
+        $attraction['name'] = "Sarawak Cultural Village";
+        $attraction['text'] = "<p>Tucked away at the foothills of legendary Mount Santubong, 35 km from Kuching is Sarawak's fascinating cultural showcase, the award winning &quot;Sarawak Cultural Village&quot; which is also the venue for the World Harvest Festival and the Rainforest World Music Festival, an internationally renowned festival.</p> <p>This living museum is wholly owned by the Sarawak Economic Development Corporation (SEDC) depicts the heritage of the major racial groups in Sarawak and conveniently portrays their respective lifestyle amidst 14 acres of tropical vegetation.</p> <p>Here, it is possible to see Sarawak's ethnic diversity at a glance. The handicraft is both bewildering and tempting, including the Kain Songket (Malay cloth with gold inlay), Pua Kumbu (Iban housewives textiles), Melanau Terendak (sunhat), Bidayuh tambok (basket), Iban parang (swords), Orang Ulu wood carving and Chinese ceramics.</p> <p>The 45-minute cultural performance of songs, dances and entertainment is something you will not want to miss during your visit to Sarawak.</p>";
+        $attraction['cost'] = "25";
+        $attraction['photo'] = asset('images/scv0.jpg');
+        $attraction['photos'] = [0 => asset('images/scv0.jpg'), 1 => asset('images/scv1.jpg'), 2 => asset('images/scv2.jpg'), 3 => asset('images/scv3.jpg')];
+        $attraction['url'] = "http://www.scv.com.my/main.asp";
         $attractions[] = $attraction;
-
-        $text = Lipsum::short()->text(1);
-        $text = Lipsum::text();
 
         $data['attractions'] = $attractions;
         // Use reference to determine redirect
@@ -178,6 +174,38 @@ class MainController extends Controller
             abort(404);
         }
         return view('attractions', $data);
+    }
+
+    public function transport()
+    {
+        $data = [];
+        $data['title'] = "Transport Accommodation";
+        $data['text'] = $this->attraction_text;
+        return view('transport', $data);
+    }
+
+    public function transports($reference = "")
+    {
+        $data = [];
+        $data['title'] = "Select Attractions";
+        // Create transports
+        $transports = [];
+
+        $transport['id'] = 0;
+        $transport['name'] = "Perodua Myvi (Manual)";
+        $transport['text'] = "The Perodua Myvi is a B-segment car produced by Malaysian manufacturer Perodua since 2005. Based on the Daihatsu Boon, the Myvi is the result of Perodua's collaboration with both Toyota and Daihatsu. The Perodua Myvi has been the best-selling car in Malaysia for 8 consecutive years, between 2006 and 2013 respectively.";
+        $transport['cost'] = "20";
+        $transport['photo'] = asset('images/myvi0.jpg');
+        $transport['photos'] = [0 => asset('images/myvi0.jpg'), 1 => asset('images/myvi1.jpg'), 2 => asset('images/myvi2.jpg')];
+        $transport['url'] = "http://www.perodua.com.my/ourcars/myvi";
+        $transports[] = $transport;
+
+        $data['transports'] = $transports;
+
+        $data['r_name'] = "payment";
+        $data['r_url'] = url('/pay');
+
+        return view('transports', $data);
     }
 
     public function pay()

@@ -9,21 +9,16 @@
         <div  class="grid js-masonry">
         @foreach($accommodations as $accommodation)
         <div class="col-xs-12 col-md-6 grid-itea">
-            <div class="panel panel-primary">
+            <div class="panel panel-primary" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
                 <div class="panel-heading">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="">
-                            {{ $accommodation['name'] }}
-                        </label>
-                    </div>
+                    <h4>{{ $accommodation['name'] }}</h4>
                 </div>
-                <div class="panel-body" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
+                <div class="panel-body">
                     <div class="col-xs-12 col-md-3">
                         <img width="300" height="300" src="{{ $accommodation['photo'] }}" class="img-responsive" alt="Image missing :(">
                     </div>
                     <div class="col-xs-12 col-md-9">
-                        {{ substr($accommodation['text'], 0, 60) }}...
+                        {{ substr(strip_tags($accommodation['text']), 0, 60) }}...
                     </div>
                 </div>
             </div>
@@ -39,11 +34,38 @@
                         <h4 class="modal-title" id="accommodationModalLabel">Accommodations</h4>
                     </div>
                     <div class="modal-body">
-                        {{ $accommodation['text'] }}
+                        <div id="carousel-{{ $accommodation['id'] }}" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                @for($i = 0; $i < count($accommodation['photos']); $i++)
+                                <div class="item @if($i == 0) active @endif">
+                                    <img width="100%" src="{{ $accommodation['photos'][$i] }}" alt="Image missing">
+                                </div>
+                                @endfor
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-{{ $accommodation['id'] }}" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-{{ $accommodation['id'] }}" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <br />
+                        {!! $accommodation['text'] !!}
+                        <br />
+                        <small>Accommdates up to {{ $accommodation['people'] }} people.</small>
+                        <br />
+                        <small>*Pricing: RM {{ $accommodation['cost'] }} per night.</small>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="{{ $accommodation['url'] }}" class="btn btn-primary">View Page</a>
+                        <div class="form-group form-inline">
+                            <label for="textbox-{{ $accommodation['id'] }}" >Reservations</label>
+                            <input id="textbox-{{ $accommodation['id'] }}" type="text" class="form-control" placeholder="0"></input>
+                            <a href="{{ $accommodation['url'] }}" class="btn btn-primary">View Page</a>
+                        </div>
                     </div>
                 </div>
             </div>
