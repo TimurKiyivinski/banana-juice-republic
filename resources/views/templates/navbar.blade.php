@@ -31,6 +31,10 @@
             <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
             Attractions
             </a></li>
+            <li><a href="{{ URL::to('/transport') }}">
+            <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+            Transport
+            </a></li>
         </ul>
     </div>
 </div>

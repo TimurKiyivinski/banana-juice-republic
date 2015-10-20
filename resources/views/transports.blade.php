@@ -11,11 +11,11 @@
         <div class="col-xs-12 col-md-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    {{ $attraction['name'] or "Name" }}
-                    <div class="form-group form-inline">
-                        <label for="textbox-{{ $attraction['id'] }}">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">
+                            {{ $attraction['name'] }}
                         </label>
-                        <input id="textbox-{{ $attraction['id'] }}" class="form-control" type="textbox" placeholder="0">
                     </div>
                 </div>
                 <div class="panel-body" data-toggle="modal" data-target="#attractionModal-{{ $attraction['id'] }}">
