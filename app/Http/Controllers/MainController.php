@@ -242,6 +242,60 @@ class MainController extends Controller
         $transport['url'] = "http://www.perodua.com.my/ourcars/myvi";
         $transports[] = $transport;
 
+        $transport['id'] = 2;
+        $transport['name'] = "Perodua Alza (Manual)";
+        $transport['text'] = "The Perodua Alza is a compact MPV produced by Perodua aimed at young families. It is a second attempt in re-badging MPV after Perodua Rusa. It is a badge engineering of the Daihatsu Boon Luminas and Toyota Passo Sette, but uses a de-tuned 1.5-litre Toyota Avanza and Daihatsu Terios engine. The name is derived from the Spanish verb alzar, which means \"to raise\". The name came from an internal competition held amongst Perodua's staff during the car's development phase. Most Malaysians view the Alza as a \"Myvi on steroids\". Since its selling price is almost identical to the Proton Exora's, contrasts between the two cars have been drawn in the Alza's disfavor. It has been noted that the Alza lacks the advanced features of the Exora, such as the Body Control Module (BCM) which allows automatic activation of certain car functions.";
+        $transport['cost'] = "25";
+        $transport['photo'] = asset('images/alza0.jpg');
+        $transport['photos'] = [0 => asset('images/alza0.jpg'), 1 => asset('images/alza1.jpg'), 2 => asset('images/alza2.jpg')];
+        $transport['url'] = "http://www.perodua.com.my/ourcars/alza";
+        $transports[] = $transport;
+
+        $transport['id'] = 3;
+        $transport['name'] = "Perodua Alza (Automatic)";
+        $transport['text'] = "The Perodua Alza is a compact MPV produced by Perodua aimed at young families. It is a second attempt in re-badging MPV after Perodua Rusa. It is a badge engineering of the Daihatsu Boon Luminas and Toyota Passo Sette, but uses a de-tuned 1.5-litre Toyota Avanza and Daihatsu Terios engine. The name is derived from the Spanish verb alzar, which means \"to raise\". The name came from an internal competition held amongst Perodua's staff during the car's development phase. Most Malaysians view the Alza as a \"Myvi on steroids\". Since its selling price is almost identical to the Proton Exora's, contrasts between the two cars have been drawn in the Alza's disfavor. It has been noted that the Alza lacks the advanced features of the Exora, such as the Body Control Module (BCM) which allows automatic activation of certain car functions.";
+        $transport['cost'] = "25";
+        $transport['photo'] = asset('images/alza0.jpg');
+        $transport['photos'] = [0 => asset('images/alza0.jpg'), 1 => asset('images/alza1.jpg'), 2 => asset('images/alza2.jpg')];
+        $transport['url'] = "http://www.perodua.com.my/ourcars/alza";
+        $transports[] = $transport;
+
+        $transport['id'] = 4;
+        $transport['name'] = "Perodua Axia (Manual)";
+        $transport['text'] = "The Perodua Axia is a five-door hatchback produced by Malaysian automobile manufacturer, Perodua. It was launched on 15 September as the successor to the Perodua Viva. The car takes over the title of being the most affordable car in Malaysia from the Perodua Viva. The Axia is the first model to début from Perodua\'s all-new second factory in Rawang, Selangor.";
+        $transport['cost'] = "15";
+        $transport['photo'] = asset('images/axia0.jpg');
+        $transport['photos'] = [0 => asset('images/axia0.jpg'), 1 => asset('images/axia1.jpg'), 2 => asset('images/axia2.jpg')];
+        $transport['url'] = "http://www.perodua.com.my/ourcars/axia";
+        $transports[] = $transport;
+
+        $transport['id'] = 5;
+        $transport['name'] = "Perodua Axia (Automatic)";
+        $transport['text'] = "The Perodua Axia is a five-door hatchback produced by Malaysian automobile manufacturer, Perodua. It was launched on 15 September as the successor to the Perodua Viva. The car takes over the title of being the most affordable car in Malaysia from the Perodua Viva. The Axia is the first model to début from Perodua\'s all-new second factory in Rawang, Selangor.";
+        $transport['cost'] = "15";
+        $transport['photo'] = asset('images/axia0.jpg');
+        $transport['photos'] = [0 => asset('images/axia0.jpg'), 1 => asset('images/axia1.jpg'), 2 => asset('images/axia2.jpg')];
+        $transport['url'] = "http://www.perodua.com.my/ourcars/axia";
+        $transports[] = $transport;
+
+        $transport['id'] = 6;
+        $transport['name'] = "Toyota Alphard (Manual)";
+        $transport['text'] = "The Toyota Alphard is a full-size luxury MPV (minivan) produced by the Japanese automaker Toyota since 2002. It is available as a seven- or eight-seater with a 2.4 and 3.5 litre gasoline engine in 3 different model lines - Alphard G, Alphard V, and the Alphard Hybrid, which uses the 2.4 litre engine along with an electrical motor and batteries. Toyota states its \"E-Four electric 4WD system that regulates a rear-mounted, rear-wheel-propelling electric motor and coordinates electric power distribution to all four wheels. An ECB (Electronically Controlled Brake system) provides efficient wheel-by-wheel brake control.\" The vehicle was named after the Alphard, the brightest star in the constellation Hydra.";
+        $transport['cost'] = "30";
+        $transport['photo'] = asset('images/alphard0.jpg');
+        $transport['photos'] = [0 => asset('images/alphard0.jpg'), 1 => asset('images/alphard1.jpg'), 2 => asset('images/alphard2.jpg')];
+        $transport['url'] = "http://www.toyota.astra.co.id/product/alphard/#exterior";
+        $transports[] = $transport;
+
+        $transport['id'] = 7;
+        $transport['name'] = "Toyota Alphard (Automatic)";
+        $transport['text'] = "The Toyota Alphard is a full-size luxury MPV (minivan) produced by the Japanese automaker Toyota since 2002. It is available as a seven- or eight-seater with a 2.4 and 3.5 litre gasoline engine in 3 different model lines - Alphard G, Alphard V, and the Alphard Hybrid, which uses the 2.4 litre engine along with an electrical motor and batteries. Toyota states its \"E-Four electric 4WD system that regulates a rear-mounted, rear-wheel-propelling electric motor and coordinates electric power distribution to all four wheels. An ECB (Electronically Controlled Brake system) provides efficient wheel-by-wheel brake control.\" The vehicle was named after the Alphard, the brightest star in the constellation Hydra.";
+        $transport['cost'] = "30";
+        $transport['photo'] = asset('images/alphard0.jpg');
+        $transport['photos'] = [0 => asset('images/alphard0.jpg'), 1 => asset('images/alphard1.jpg'), 2 => asset('images/alphard2.jpg')];
+        $transport['url'] = "http://www.toyota.astra.co.id/product/alphard/#exterior";
+        $transports[] = $transport;
+
         $data['transports'] = $transports;
 
         $data['r_name'] = "payment";
