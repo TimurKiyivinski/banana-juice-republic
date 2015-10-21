@@ -109,9 +109,8 @@ class MainController extends Controller
         $data = [];
         $data['title'] = "Select Accommodations";
         // Create accommodations
-        $accommodations = [];
-
         $accommodation = [];
+
         $accommodation['id'] = 0;
         $accommodation['name'] = "Pullman Superior Suite";
         $accommodation['text'] = "With 38 sqm of space, the Superior Room is perfect for two adults and offer guests both comfort and privacy. Among the features are LCD TV, an efficient working desk for business guests, a high speed internet access, Bath Tub with Exclusive Bathroom Amenities and Separate Rain Forest Shower.";
@@ -120,6 +119,106 @@ class MainController extends Controller
         $accommodation['photo'] = asset('images/pull0.jpg');
         $accommodation['photos'] = [0 => asset('images/pull0.jpg'), 1 => asset('images/pull1.jpg'), 2 => asset('images/pull2.jpg')];
         $accommodation['url'] = "http://www.pullmankuching.com/rooms-suites/superior/";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 1;
+        $accommodation['name'] = "Pullman Deluxe Suite";
+        $accommodation['text'] = "With a comfortable area of 45 sqm, guests can enjoy a panoramic view from the full length floor to ceiling glass window. Among the features are Living Room, Walk-in Closet, an efficient working desk for business guests and high speed internet access.";
+        $accommodation['cost'] = "290";
+        $accommodation['people'] = "2";
+        $accommodation['photo'] = asset('images/pulld0.jpg');
+        $accommodation['photos'] = [0 => asset('images/pulld0.jpg'), 1 => asset('images/pulld1.jpg'), 2 => asset('images/pulld2.jpg')];
+        $accommodation['url'] = "http://www.pullmankuching.com/rooms-suites/deluxe/";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 2;
+        $accommodation['name'] = "Pullman Family Room";
+        $accommodation['text'] = "The Family room is 51 sqm with a king size bed and a single bed overseeing the view of Kuching city. Among the features are LCD TV, an efficient working desk for business guests, a high speed internet access, Bath Tub with Exclusive Bathroom Amenities and Separate Rain Forest Shower.";
+        $accommodation['cost'] = "350";
+        $accommodation['people'] = "4";
+        $accommodation['photo'] = asset('images/pullf0.jpg');
+        $accommodation['photos'] = [0 => asset('images/pullf0.jpg'), 1 => asset('images/pullf1.jpg'), 2 => asset('images/pullf2.jpg')];
+        $accommodation['url'] = "http://www.pullmankuching.com/rooms-suites/family-room/";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 3;
+        $accommodation['name'] = "Kuching Waterfront Lodge Single";
+        $accommodation['text'] = "24 hours reception & CCTV security system, local breakfast included, Internet access & WIFI in lobby, Hot and cold shower, Laundry at special rate. All rooms with attached bathroom (Except for male dormitory), All rooms with air conditioning, Linen, & towels provided for all rooms, TV & telephones provided in all rooms except dorms, Iron & ironing board available";
+        $accommodation['cost'] = "80";
+        $accommodation['people'] = "1";
+        $accommodation['photo'] = asset('images/waterfront0.jpg');
+        $accommodation['photos'] = [0 => asset('images/waterfront0.jpg'), 1 => asset('images/waterfront1.jpg'), 2 => asset('images/waterfront2.jpg')];
+        $accommodation['url'] = "http://www.kuchingwaterfrontlodge.com/rooms.php";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 4;
+        $accommodation['name'] = "Pullman Royal Suite";
+        $accommodation['text'] = "The Premier Suite is 152 sqm where guests can enjoy panoramic view of Kuching city. Among the features are LCD Television with Interactive Device Ports, High Speed Internet Access, In-Room Safe, Telephone, Duvet Cover, Fitness Gear, Hairdryer, Iron & Ironing Board, Espresso Machine, Voice Mail Facility, Radio/Alarm Clock, Bath Tub with Exclusive Bathroom Amenities, Separate Rain Forest Shower, Make-up/ Magnifying Mirror, Bathrobes & Slippers. In addition, the Premier Suite has a separate Dining Area and Living Room.";
+        $accommodation['cost'] = "400";
+        $accommodation['people'] = "3";
+        $accommodation['photo'] = asset('images/pullroyal0.jpg');
+        $accommodation['photos'] = [0 => asset('images/pullroyal0.jpg'), 1 => asset('images/pullroyal1.jpg')];
+        $accommodation['url'] = "http://www.pullmankuching.com/rooms-suites/royal-suite-room/";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 5;
+        $accommodation['name'] = "Hilton King Deluxe Plus";
+        $accommodation['text'] = "Larger room with 62 sq. m./667 sq. ft., picturesque city & river views, separate sitting area. The King Deluxe Plus room is double the size of a King Hilton Guestroom, giving you extra space for comfort to work, stretch out to watch the LCD TV or simply to enjoy the stunning river views. This contemporary room has one king-sized bed, a separate relaxation sitting area and a marble bathroom with a dressing section and walk-in shower.";
+        $accommodation['cost'] = "400";
+        $accommodation['people'] = "2";
+        $accommodation['photo'] = asset('images/hiltonkd0.jpg');
+        $accommodation['photos'] = [0 => asset('images/hiltonkd0.jpg'), 1 => asset('images/hiltonkd1.jpg'), 2 => asset('images/hiltonkd2.jpg')];
+        $accommodation['url'] = "http://www3.hilton.com/en/hotels/malaysia/hilton-kuching-KUCHITW/accommodations/rooms.html";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 6;
+        $accommodation['name'] = "Hilton Governor Suite";
+        $accommodation['text'] = "Stylish suite with stunning panoramic city and river views, Executive Lounge access. Wake up to the spectacular views of the city and the Sarawak River from the 4-poster bed in this grand 169 sq. m./1,819 sq. ft. Governor Suite. Other features include separate living, dining and work areas, plus a kitchenette, and an elegant bathroom with whirlpool. Enjoy Executive Lounge access with free breakfast, refreshments and WiFi. Maximum occupancy 2 adults.";
+        $accommodation['cost'] = "430";
+        $accommodation['people'] = "2";
+        $accommodation['photo'] = asset('images/hiltongs0.jpg');
+        $accommodation['photos'] = [0 => asset('images/hiltongs0.jpg'), 1 => asset('images/hiltongs1.jpg'), 2 => asset('images/hiltongs2.jpg')];
+        $accommodation['url'] = "http://www3.hilton.com/en/hotels/malaysia/hilton-kuching-KUCHITW/accommodations/suites.html";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 7;
+        $accommodation['name'] = "Hilton King Executive Plus";
+        $accommodation['text'] = "Spacious 64 sq. m./689 sq. ft., city/river views, Executive Lounge access, separate seating area, WiFi. Choose this spacious King Executive Plus guest room, which is double the size of a King Executive Room, offering city or river views and Executive Lounge access with free breakfast and refreshments. This bright and airy room has one king-sized bed and large opening windows. Get to work at the desk using WiFi (fees apply), stretch out on the sofa in a Yukata (Japanese cotton kimono) and make a choice from the indulgent pillow menu.";
+        $accommodation['cost'] = "460";
+        $accommodation['people'] = "2";
+        $accommodation['photo'] = asset('images/hiltonep0.jpg');
+        $accommodation['photos'] = [0 => asset('images/hiltonep0.jpg'), 1 => asset('images/hiltonep1.jpg'), 2 => asset('images/hiltonep2.jpg')];
+        $accommodation['url'] = "http://www3.hilton.com/en/hotels/malaysia/hilton-kuching-KUCHITW/accommodations/executive.html";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 8;
+        $accommodation['name'] = "Abell's Deluxe";
+        $accommodation['text'] = "From here, you can see the window facing the street of Tunku Abdul Rahman, maximum 1 extra bed, king bed available, as well as the room size is 23 square meter";
+        $accommodation['cost'] = "200";
+        $accommodation['people'] = "2";
+        $accommodation['photo'] = asset('images/abelld0.jpg');
+        $accommodation['photos'] = [0 => asset('images/abelld0.jpg'), 1 => asset('images/abelld1.jpg')];
+        $accommodation['url'] = "http://abellhotel.com/v3/product/abells-deluxe/";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 9;
+        $accommodation['name'] = "Abell Deluxe Triple";
+        $accommodation['text'] = "Even with the limited views, Wifi is available at the lobby for the convenience of our beloved guests. Furthermore, 3 single beds are provided in this spacious room.";
+        $accommodation['cost'] = "180";
+        $accommodation['people'] = "3";
+        $accommodation['photo'] = asset('images/abelldt0.jpg');
+        $accommodation['photos'] = [0 => asset('images/abelldt0.jpg'), 1 => asset('images/abelldt1.jpg')];
+        $accommodation['url'] = "http://abellhotel.com/v3/product/deluxe-triple/";
+        $accommodations[] = $accommodation;
+
+        $accommodation['id'] = 10;
+        $accommodation['name'] = "Batik Boutique City Facing Suite";
+        $accommodation['text'] = "These are The Batik’s city-facing suites, each decked out with a king sized bed and a lush silk duvet. The bathroom slides seamlessly to the bedroom with glass bi-fold doors, so guests can choose to watch TV while they soak up the suds in the terrazzo bathtub.";
+        $accommodation['cost'] = "200";
+        $accommodation['people'] = "2";
+        $accommodation['photo'] = asset('images/batikfc0.jpg');
+        $accommodation['photos'] = [0 => asset('images/batikfc0.jpg'), 1 => asset('images/batikfc1.jpg')];
+        $accommodation['url'] = "http://batikboutiquehotel.com/our-rooms/";
         $accommodations[] = $accommodation;
 
         $data['accommodations'] = $accommodations;
@@ -319,6 +418,26 @@ class MainController extends Controller
         $food['photo'] = asset('images/topspot0.jpg');
         $food['photos'] = [0 => asset('images/topspot0.jpg'), 1 => asset('images/topspot1.jpg'), 2 => asset('images/topspot2.jpg'), 3 => asset('images/topspot3.jpg')];
         $food['url'] = "https://www.google.com.my/maps/place/Topspot+Food+Court/@1.556247,110.3499354,17z/data=!3m1!4b1!4m2!3m1!1s0x31fba7ea4e7e9457:0x8b50b07ca672010f";
+        $foods[] = $food;
+
+        $food['id'] = 1;
+        $food['name'] = "Choon Choon Cafe";
+        $food['text'] = "<p>Talking about Sarawak Laksa, Kuching has the highest reputation in serving this specialty in Sarawak.</p> <p>This laksa place is well liked for both locals and visitors. So if you happen to visit Kuching, don't forget to try Sarawak Laksa here.</p> <p>About which stall in Kuching serve the best and most authentic taste of Laksa Sarawak, there are many versions, much depend on local preference.</p>";
+        $food['cost_min'] = "10";
+        $food['cost_max'] = "25";
+        $food['photo'] = asset('images/ccc0.jpg');
+        $food['photos'] = [0 => asset('images/ccc0.jpg'), 1 => asset('images/ccc1.jpg'), 2 => asset('images/ccc2.jpg'), 3 => asset('images/ccc3.jpg')];
+        $food['url'] = "https://www.google.com/maps/dir/''/choon+choon+cafe/@1.5566499,110.2853563,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x31fba7c1ad0d0b97:0xeff215e83d039091!2m2!1d110.3553969!2d1.5566511";
+        $foods[] = $food;
+
+        $food['id'] = 2;
+        $food['name'] = "Jambu Restaurant & Lounge";
+        $food['text'] = "<p>JAMBU is a unique boutique restaurant housed in a Rajah Brooke era bungalow (1930's)surrounded by lush green gardens, ambient lighting, water features and our own private car parking area.</p> <p>Our menu focuses on Modern Borneo Cuisine - the flavours of Sarawak with a European twist and feel.</p> <p>We also offer an enticing selection of Tapas - both Spanish and Local Borneo.</p>";
+        $food['cost_min'] = "10";
+        $food['cost_max'] = "45";
+        $food['photo'] = asset('images/jrl0.jpg');
+        $food['photos'] = [0 => asset('images/jrl0.jpg'), 1 => asset('images/jrl1.jpg'), 2 => asset('images/jrl2.jpg'), 3 => asset('images/jrl3.jpg')];
+        $food['url'] = "https://www.google.com/maps/dir/''/jambu+restaurant+and+lounge/@1.5966349,110.2355564,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31fba79118289fc1:0x17b3bacae0013f05!2m2!1d110.3478257!2d1.547302";
         $foods[] = $food;
 
         $data['foods'] = $foods;
