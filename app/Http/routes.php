@@ -25,5 +25,6 @@ Route::get('/accommodations/{reference?}', 'MainController@accommodations')
     ->where('reference', '[A-Za-z\ ]+');
 Route::get('/attractions/{reference?}', 'MainController@attractions')
     ->where('reference', '[A-Za-z\ ]+');
+Route::get('/food', 'MainController@food');
 Route::get('/pay', 'MainController@pay');
 Route::get('/contact', 'MainController@contact');

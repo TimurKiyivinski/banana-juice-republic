@@ -35,6 +35,10 @@
             <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
             Transport
             </a></li>
+            <li><a href="{{ URL::to('/food') }}">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            Eateries
+            </a></li>
             <li><a href="{{ URL::to('/contact') }}">
             <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
             Contact Us

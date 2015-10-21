@@ -16,7 +16,7 @@ class MainController extends Controller
      */
     public $main_text = "Main Text";
     public $register_text = "Register Text";
-    public $accommodation_text = "Accommodation Text";
+    public $accommodation_text = "<p>Book your accommodation through one of our sponsored hotels at a discounted price. All accommodations include<b>provided transport</b> to and from the hotel throughout the conference. All hotel partners provide <b>free breakfast and dinner</b> throughout the conderence too, although guests are invited to try local delicacies and food attractions.";
     public $attraction_text = "Attraction Text";
     public $transport_text = "Transport Text";
 
@@ -201,12 +201,41 @@ class MainController extends Controller
         $transport['url'] = "http://www.perodua.com.my/ourcars/myvi";
         $transports[] = $transport;
 
+        $transport['id'] = 1;
+        $transport['name'] = "Perodua Myvi (Automatic)";
+        $transport['text'] = "The Perodua Myvi is a B-segment car produced by Malaysian manufacturer Perodua since 2005. Based on the Daihatsu Boon, the Myvi is the result of Perodua's collaboration with both Toyota and Daihatsu. The Perodua Myvi has been the best-selling car in Malaysia for 8 consecutive years, between 2006 and 2013 respectively.";
+        $transport['cost'] = "20";
+        $transport['photo'] = asset('images/myvi3.jpg');
+        $transport['photos'] = [0 => asset('images/myvi3.jpg'), 1 => asset('images/myvi1.jpg'), 2 => asset('images/myvi2.jpg')];
+        $transport['url'] = "http://www.perodua.com.my/ourcars/myvi";
+        $transports[] = $transport;
+
         $data['transports'] = $transports;
 
         $data['r_name'] = "payment";
         $data['r_url'] = url('/pay');
 
         return view('transports', $data);
+    }
+
+    public function food()
+    {
+        $data = [];
+        $data['title'] = "Local Delicacies";
+
+        // Create eateries
+        $food['id'] = 0;
+        $food['name'] = "Top Spot Food Court";
+        $food['text'] = "Rooftop dining is not uncommon for fine dining restaurants and bars. But what about seafood in a hawker setting? Well, in Kuching there’s this place called Top Spot Food Court where half a dozen of restaurants – mostly serving seafood (halal options available) operate on the roof of a 6 storey car park.";
+        $food['cost_min'] = "15";
+        $food['cost_max'] = "45";
+        $food['photo'] = asset('images/topspot0.jpg');
+        $food['photos'] = [0 => asset('images/topspot0.jpg'), 1 => asset('images/topspot1.jpg'), 2 => asset('images/topspot2.jpg'), 3 => asset('images/topspot3.jpg')];
+        $food['url'] = "https://www.google.com.my/maps/place/Topspot+Food+Court/@1.556247,110.3499354,17z/data=!3m1!4b1!4m2!3m1!1s0x31fba7ea4e7e9457:0x8b50b07ca672010f";
+        $foods[] = $food;
+
+        $data['foods'] = $foods;
+        return view('food', $data);
     }
 
     public function pay()
