@@ -62,6 +62,12 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group form-inline">
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control" placeholder="From: dd/mm/yyyy"></input>
+                            <input type="text" class="form-control" placeholder="To: dd/mm/yyyy"></input>
+                        </div>
+                        <div class="form-group form-inline">
                             <label for="textbox-{{ $accommodation['id'] }}" >Reservations</label>
                             <input id="textbox-{{ $accommodation['id'] }}" type="text" class="form-control" placeholder="0"></input>
                             <a href="{{ $accommodation['url'] }}" class="btn btn-primary">View Page</a>
@@ -76,7 +82,4 @@
         </div>
     </div>
 </div>
-@stop
-@section('script_extra')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
 @stop

@@ -97,7 +97,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="{{ URL::to('/attractions') }}" class="btn btn-primary">Book</a>
+                        <a href="{{ URL::to('/attraction') }}" class="btn btn-primary">Book</a>
                     </div>
                 </div>
             </div>

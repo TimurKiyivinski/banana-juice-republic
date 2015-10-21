@@ -35,6 +35,10 @@
             <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
             Transport
             </a></li>
+            <li><a href="{{ URL::to('/contact') }}">
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+            Contact Us
+            </a></li>
         </ul>
     </div>
 </div>

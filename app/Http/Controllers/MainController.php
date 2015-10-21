@@ -18,6 +18,7 @@ class MainController extends Controller
     public $register_text = "Register Text";
     public $accommodation_text = "Accommodation Text";
     public $attraction_text = "Attraction Text";
+    public $transport_text = "Transport Text";
 
     public function index()
     {
@@ -180,7 +181,7 @@ class MainController extends Controller
     {
         $data = [];
         $data['title'] = "Transport Accommodation";
-        $data['text'] = $this->attraction_text;
+        $data['text'] = $this->transport_text;
         return view('transport', $data);
     }
 
@@ -213,6 +214,13 @@ class MainController extends Controller
         $data = [];
         $data['title'] = "Make Payment";
         return view('pay', $data);
+    }
+
+    public function contact()
+    {
+        $data = [];
+        $data['title'] = "Contact Us";
+        return view('contact', $data);
     }
 
 }

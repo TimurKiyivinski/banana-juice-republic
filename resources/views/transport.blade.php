@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="page-header">
-            <h1>Transport<small>Car Rentals</small>
+            <h1>Transport <small>Car Rentals</small>
                 <div class="hidden-xs hidden-sm btn-group pull-right">
                     <a href="{{ URL::to('/login', ['type' => '1', 'reference' => 'transport'] ) }}" class="btn btn-primary">
                         Use Registration Token
@@ -17,6 +17,10 @@
         </div>
     </div>
     <div class="row">
+        <div class="jumbotron">
+            <h1>Don't drive?</h1>
+            <p>Hit up our Taxi hotline at 1800-SDIC-TAXI</p>
+        </div>
         {{ $text }}
     </div>
     <div class="row">
