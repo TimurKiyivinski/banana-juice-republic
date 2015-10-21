@@ -159,6 +159,33 @@ class MainController extends Controller
         $attraction['url'] = "http://www.scv.com.my/main.asp";
         $attractions[] = $attraction;
 
+        $attraction['id'] = 1;
+        $attraction['name'] = "Semenggoh Wildlife Centre";
+        $attraction['text'] = "<p>The Semenggoh Wildlife Centre was established in 1975 to care for wild animals which have either been found injured in the forest, orphaned, or were previously kept as illegal pets.</p> <p>The centre is situated within the boundaries of the Semenggoh Nature Reserve, approximately 24 km from Kuching.</p> <p>The Centre has been a resounding success, caring for almost 1,000 endangered mammals, birds and reptiles from dozens of different species.</p> <p>However it is the orang utan rehabilitation programme that has made the Centre famous.</p> <p>In one respect, Semenggoh has been too successful &ndash; so many orang utan have been successfully reintroduced into the surrounding forest reserve that the forest&rsquo;s carrying capacity has been reached, and rehabilitation activities have been transferred to the Matang Wildlife Centre, part of Kubah National Park.</p> <p>As a result of its success, Semenggoh's role has changed and it is nowadays a centre for the study of orang utan biology and behaviour, as well as a safe and natural haven for dozens of semi-wild orang utan, graduates of the rehabilitation programme.</p> <p>It is also home to numerous baby orang utan, born in the wild to rehabilitated mothers, a further testament to the success of the programme.</p>";
+        $attraction['cost'] = "3";
+        $attraction['photo'] = asset('images/swc0.jpg');
+        $attraction['photos'] = [0 => asset('images/swc0.jpg'), 1 => asset('images/swc1.jpg'), 2 => asset('images/swc2.jpg')];
+        $attraction['url'] = "http://www.sarawakforestry.com/htm/snp-nr-semenggoh.html";
+        $attractions[] = $attraction;
+
+        $attraction['id'] = 2;
+        $attraction['name'] = "Fairy Cave";
+        $attraction['text'] = "<p>Entrance to Fairy Cave(also known as Gua Pari) is an impressive show cave near the former gold mining settlement of Bau and about 40km from Kuching, Sarawak.</p> <p>It is just a few minutes drive from another show cave, Wind Cave, and most tourists would combine both on a half-day trip from Kuching.</p> <p>Access to the cave is via a four storey concrete staircase which brings you to the cave entrance.</p> <p>The cave is criss-crossed with concrete footpaths and steps and it is best to stick to the paths for safety and to avoid damaging the fragile eco-system.</p> <p>The combination of light, water and thin, guano-enriched soil allows plants to survive here, mostly ferns.</p>";
+        $attraction['cost'] = "0";
+        $attraction['photo'] = asset('images/fc0.jpg');
+        $attraction['photos'] = [0 => asset('images/fc0.jpg'), 1 => asset('images/fc1.jpg'), 2 => asset('images/fc2.jpg'), 3 => asset('images/fc3.jpg')];
+        $attraction['url'] = "http://www.malaysia-traveller.com/fairy-cave.html";
+        $attractions[] = $attraction;
+
+        $attraction['id'] = 3;
+        $attraction['name'] = "Bako National Park";
+        $attraction['text'] = "<p>With its rainforest, abundant wildlife, jungle streams, waterfalls, interesting plant life, secluded beaches, panoramic rocky shoreline, bizarre rock formations and extensive network of trekking trails, Bako National Park offers visitors an excellent introduction to the rainforest and coastline of Borneo.</p> <p>Bako may not have an instantly recognisable star attraction, but there can be very few places in the world that pack so much natural beauty into such a limited area, all just 37 km from Kuching.</p> <p>Its accessibility - and its sheer range of attractions and activities - have made Bako one of the most popular parks in Sarawak.</p> <p>Gazetted in 1957, Bako is Sarawak’s oldest national park, covering an area of 2,727 hectares at the tip of the Muara Tebas peninsula.</p> <p>It is one of the smallest national parks in Sarawak, yet one of the most interesting, as it contains almost every type of vegetation found in Borneo.</p> <p>The well-maintained network of nature trails - from easy forest strolls to full-day jungle treks – allows visitors to get the most out of this unique environment.</p>";
+        $attraction['cost'] = "10";
+        $attraction['photo'] = asset('images/bnp0.jpg');
+        $attraction['photos'] = [0 => asset('images/bnp0.jpg'), 1 => asset('images/bnp1.jpg'), 2 => asset('images/bnp2.jpg'), 3 => asset('images/bnp3.jpg')];
+        $attraction['url'] = "http://www.sarawakforestry.com/htm/snp-np-bako.html";
+        $attractions[] = $attraction;
+
         $data['attractions'] = $attractions;
         // Use reference to determine redirect
         switch ($reference)
