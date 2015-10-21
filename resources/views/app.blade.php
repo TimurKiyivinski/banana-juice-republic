@@ -14,5 +14,12 @@
 	@yield('content')
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('script_extra')
+<script>
+jQuery(function ($) {
+    $('.grid').imagesLoaded(function () {
+        $('.grid').masonry('layout');
+    });
+});
+</script>
 </body>
 </html>

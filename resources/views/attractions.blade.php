@@ -8,8 +8,8 @@
         </div>
         <div  class="grid js-masonry">
         @foreach($attractions as $attraction)
-        <div class="col-xs-12 col-md-6">
-            <div class="panel panel-primary" data-toggle="modal" data-target="#attractionModal-{{ $attraction['id'] }}">
+        <div class="col-xs-12 col-md-6 grid-item">
+            <div class="panel panel-info" data-toggle="modal" data-target="#attractionModal-{{ $attraction['id'] }}">
                 <div class="panel-heading">
                     <h4>{{ $attraction['name'] or "Name" }}</h4>
                 </div>

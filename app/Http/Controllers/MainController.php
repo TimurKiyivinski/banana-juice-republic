@@ -14,11 +14,12 @@ class MainController extends Controller
      *
      * @return Response
      */
-    public $main_text = "Main Text";
-    public $register_text = "Register Text";
-    public $accommodation_text = "<p>Book your accommodation through one of our sponsored hotels at a discounted price. All accommodations include<b>provided transport</b> to and from the hotel throughout the conference. All hotel partners provide <b>free breakfast and dinner</b> throughout the conderence too, although guests are invited to try local delicacies and food attractions.";
-    public $attraction_text = "Attraction Text";
-    public $transport_text = "Transport Text";
+    public $main_text = "Organized yearly for a week in August, the Society for Design and Innovation Technology International Conference is... ";
+    public $register_text = "<p>Are you convinced yet? Join the conference today! Our registration includes accommodation and attraction <b>bookings at discounted prices</b>! Our easy registration process allows you to sign in through Facebook to ease the registration process. Our staff will work out a personalized schedule for you. You can come back for bookings at any time as our system will generate a <b>personalized token</b> for you. Please be assured that your privacy is our number one priority. For more information, contact us.</p>";
+    public $accommodation_text = "<p>Book your accommodation through one of our sponsored hotels at a discounted price. All accommodations include <b>provided transport</b> to and from the hotel throughout the conference. All hotel partners provide <b>free breakfast and dinner</b> throughout the conderence too, although guests are invited to try local delicacies and food attractions.";
+    public $attraction_text = "<p>Sarawak is a land of wonders. Sign up for one of our tours. All tours will be organized during non-conference hours and are appropriate for everyone of all ages. Bringing children along? Great, our pick of attractions are guaranteed safe and fun! Also, <b>minors</b> under the age of 12 get <b>free entrance</b>.</p>";
+    public $eateries_text = "<p>Food glorious food! -and we have lots of it here! Visit one of our various eateries around Kuching and experience our local delicacies. Post your food pictures to Twitter and Instagram throughout the conference with the hasthtag <b>#SDICMakan</b> to stand a chance to win on the final day!</b>";
+    public $transport_text = "<p>Need a ride throughout the conference? <b>Not a fan of taxis?</b> Rent a car at a cheap daily rate for all your transportation needs. Our cars come in both manual and automatic and are fully equuipped with <b>GPS</b> and <b>pre-programmed attractions and routes</b>.</p>";
 
     public function index()
     {
@@ -28,9 +29,13 @@ class MainController extends Controller
         $data['register_text'] = $this->register_text;
         $data['accommodation_text'] = $this->accommodation_text;
         $data['attraction_text'] = $this->attraction_text;
+        $data['eateries_text'] = $this->eateries_text;
+        $data['transport_text'] = $this->transport_text;
         $data['img_register'] = asset('images/registration.jpg');
         $data['img_accommodation'] = asset('images/accommodation.jpg');
         $data['img_attraction'] = asset('images/attraction.jpg');
+        $data['img_eateries'] = asset('images/topspot3.jpg');
+        $data['img_transport'] = asset('images/myvi0.jpg');
         return view('index', $data);
     }
 
@@ -249,6 +254,7 @@ class MainController extends Controller
     {
         $data = [];
         $data['title'] = "Local Delicacies";
+        $data['text'] = $this->eateries_text;
 
         // Create eateries
         $food['id'] = 0;

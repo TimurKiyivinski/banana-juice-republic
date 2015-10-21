@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row">
-        {{ $text }}
+        {!! $text !!}
     </div>
     <div class="row">
         <div class="page-header">

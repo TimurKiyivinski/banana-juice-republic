@@ -21,7 +21,7 @@
             <h1>Don't drive?</h1>
             <p>Hit up our Taxi hotline at 1800-SDIC-TAXI</p>
         </div>
-        {{ $text }}
+        {!! $text !!}
     </div>
     <div class="row">
         <div class="page-header">

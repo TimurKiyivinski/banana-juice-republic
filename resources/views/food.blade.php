@@ -4,12 +4,15 @@
 <div class="container">
     <div class="row">
         <div class="page-header">
-            <h1>Our Local Attractions</h1>
+            <h1>Try out Kuching food</h1>
+        </div>
+        <div class="jumbotron">
+            <p>{!! $text !!}</p>
         </div>
         <div  class="grid js-masonry">
         @foreach($foods as $food)
-        <div class="col-xs-12 col-md-6">
-            <div class="panel panel-primary" data-toggle="modal" data-target="#foodModal-{{ $food['id'] }}">
+        <div class="col-xs-12 col-md-6 grid-item">
+            <div class="panel panel-info" data-toggle="modal" data-target="#foodModal-{{ $food['id'] }}">
                 <div class="panel-heading">
                     <h4>{{ $food['name'] or "Name" }}</h4>
                 </div>
@@ -31,7 +34,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="foodModalLabel">Attractions</h4>
+                        <h4 class="modal-title" id="foodModalLabel">Eateries</h4>
                     </div>
                     <div class="modal-body">
                         <div id="carousel-{{ $food['id'] }}" class="carousel slide" data-ride="carousel">

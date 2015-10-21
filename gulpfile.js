@@ -14,7 +14,8 @@ var elixir = require('laravel-elixir');
 var paths = {
 	'jquery': './node_modules/jquery/',
 	'bootstrap': './node_modules/bootstrap-sass/assets/',
-    'masonry': './node_modules/masonry-layout/'
+    'masonry': './node_modules/masonry-layout/',
+    'imagesloaded': './node_modules/imagesloaded/'
 }
 
 elixir(function(mix) {
@@ -23,6 +24,7 @@ elixir(function(mix) {
         .scripts([
             paths.jquery + "dist/jquery.js",
             paths.bootstrap + "javascripts/bootstrap.js",
-            paths.masonry + "dist/masonry.pkgd.js"
+            paths.masonry + "dist/masonry.pkgd.js",
+            paths.imagesloaded + "imagesloaded.js"
         ], './public/js/app.js');
 });
