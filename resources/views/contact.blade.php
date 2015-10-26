@@ -12,6 +12,8 @@
             <hr />
             <h1>Phone</h1>
             <p>+601-23456789</p>
+            <h1>Feedback</h1>
+            <a href="{{ URL::to('feedback') }}" class="btn btn-success">Tell us what you think</a>
         </div>
         <br />
     </div>

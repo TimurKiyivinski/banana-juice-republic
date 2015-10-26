@@ -89,8 +89,10 @@
                         {!! $register_text !!}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="{{ URL::to('/register') }}" class="btn btn-primary">Register</a>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#"  class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="{{ URL::to('/register') }}" class="btn btn-primary">Register</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,8 +108,10 @@
                         {!! $accommodation_text !!}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="{{ URL::to('/accommodation') }}" class="btn btn-primary">Book</a>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="{{ URL::to('/accommodation') }}" class="btn btn-primary">Book</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,8 +127,10 @@
                         {!! $attraction_text !!}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="{{ URL::to('/attraction') }}" class="btn btn-primary">Book</a>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="{{ URL::to('/attraction') }}" class="btn btn-primary">Book</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,8 +146,10 @@
                         {!! $eateries_text !!}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="{{ URL::to('/food') }}" class="btn btn-primary">View</a>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="{{ URL::to('/food') }}" class="btn btn-primary">View</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,8 +165,10 @@
                         {!! $transport_text !!}
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="{{ URL::to('/transport') }}" class="btn btn-primary">Book</a>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" class="btn btn-danger" data-dismiss="modal">Close</a>
+                            <a href="{{ URL::to('/transport') }}" class="btn btn-primary">Book</a>
+                        </div>
                     </div>
                 </div>
             </div>

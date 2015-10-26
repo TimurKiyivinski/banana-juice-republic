@@ -59,9 +59,11 @@
                         <small>*Pricing: RM {{ $attraction['cost'] }} per person.</small>
                     </div>
                     <div class="modal-footer">
-                        <div class="form-group form-inline">
-                            <label for="textbox-{{ $attraction['id'] }}" >Reservations</label>
-                            <input id="textbox-{{ $attraction['id'] }}" type="text" class="form-control" placeholder="0"></input>
+                        <div class="form-group">
+                            <input id="textbox-{{ $attraction['id'] }}" type="text" class="form-control" placeholder="Adults: 1"></input>
+                        </div>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" data-dismiss="modal" aria-label="Reserve" class="btn btn-success">Reserve</a>
                             <a href="{{ $attraction['url'] }}" class="btn btn-primary">View Page</a>
                         </div>
                     </div>

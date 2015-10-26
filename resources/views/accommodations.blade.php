@@ -56,20 +56,18 @@
                         <br />
                         {!! $accommodation['text'] !!}
                         <br />
-                        <small>Accommdates up to {{ $accommodation['people'] }} people.</small>
+                        <small>Accommodates up to {{ $accommodation['people'] }} people.</small>
                         <br />
                         <small>*Pricing: RM {{ $accommodation['cost'] }} per night.</small>
                     </div>
                     <div class="modal-footer">
-                        <div class="form-group form-inline">
-                        </div>
-                        <div class="form-group form-inline">
+                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="From: dd/mm/yyyy"></input>
                             <input type="text" class="form-control" placeholder="To: dd/mm/yyyy"></input>
+                            <input id="textbox-{{ $accommodation['id'] }}" type="text" class="form-control" placeholder="Amount: 1"></input>
                         </div>
-                        <div class="form-group form-inline">
-                            <label for="textbox-{{ $accommodation['id'] }}" >Reservations</label>
-                            <input id="textbox-{{ $accommodation['id'] }}" type="text" class="form-control" placeholder="0"></input>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" data-dismiss="modal" aria-label="Reserve" class="btn btn-success">Reserve</a>
                             <a href="{{ $accommodation['url'] }}" class="btn btn-primary">View Page</a>
                         </div>
                     </div>

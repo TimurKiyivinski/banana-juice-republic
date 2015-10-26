@@ -28,3 +28,4 @@ Route::get('/attractions/{reference?}', 'MainController@attractions')
 Route::get('/food', 'MainController@food');
 Route::get('/pay', 'MainController@pay');
 Route::get('/contact', 'MainController@contact');
+Route::get('/feedback', 'MainController@feedback');

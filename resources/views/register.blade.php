@@ -9,7 +9,7 @@
                     <a href="{{ URL::to('/details') }}" class="btn btn-primary">
                         Register
                     </a>
-                    <a href="{{ URL::to('/login', ['type' => '0', 'reference' => 'accommodation'] ) }}" class="btn btn-info">
+                    <a href="{{ URL::to('/login', ['type' => '0', 'reference' => 'details'] ) }}" class="btn btn-info">
                         Login with Facebook
                     </a>
                 </div>
@@ -27,7 +27,7 @@
             <a href="{{ URL::to('/details') }}" class="btn btn-primary center-block">
                 Register
             </a>
-            <a href="{{ URL::to('/login', ['type' => '0', 'reference' => 'accommodation'] ) }}" class="btn btn-info center-block">
+            <a href="{{ URL::to('/login', ['type' => '0', 'reference' => 'details'] ) }}" class="btn btn-info center-block">
                 Login with Facebook
             </a>
         </div>

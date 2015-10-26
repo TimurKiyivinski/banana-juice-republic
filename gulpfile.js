@@ -15,16 +15,22 @@ var paths = {
 	'jquery': './node_modules/jquery/',
 	'bootstrap': './node_modules/bootstrap-sass/assets/',
     'masonry': './node_modules/masonry-layout/',
-    'imagesloaded': './node_modules/imagesloaded/'
+    'imagesloaded': './node_modules/imagesloaded/',
+    'summernote': './node_modules/summernote/',
+    'fontawesome': './node_modules/font-awesome/'
 }
 
 elixir(function(mix) {
-    mix.sass("app.scss", 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/']})
-        .copy(paths.bootstrap + 'fonts/**', 'public/fonts')
-        .scripts([
-            paths.jquery + "dist/jquery.js",
-            paths.bootstrap + "javascripts/bootstrap.js",
-            paths.masonry + "dist/masonry.pkgd.js",
-            paths.imagesloaded + "imagesloaded.js"
-        ], './public/js/app.js');
+    mix.sass("app.scss", 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/']});
+    mix.copy(paths.bootstrap + 'fonts/**', 'public/fonts');
+    mix.copy(paths.fontawesome + 'fonts/**', 'public/fonts');
+    mix.copy(paths.fontawesome + 'css/**', 'public/css');
+    mix.copy(paths.summernote + "dist/summernote-bs3.css", 'public/css');
+    mix.scripts([
+        paths.jquery + "dist/jquery.js",
+        paths.bootstrap + "javascripts/bootstrap.js",
+        paths.masonry + "dist/masonry.pkgd.js",
+        paths.imagesloaded + "imagesloaded.js",
+        paths.summernote + "dist/summernote.js"
+    ], './public/js/app.js');
 });

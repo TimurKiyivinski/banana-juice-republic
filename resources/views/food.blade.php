@@ -62,10 +62,9 @@
                         <small>*Pricing: RM {{ $food['cost_min'] }} to {{ $food['cost_max'] }} per person.</small>
                     </div>
                     <div class="modal-footer">
-                        <div class="form-group form-inline">
-                            <label for="textbox-{{ $food['id'] }}" >Reservations</label>
-                            <input id="textbox-{{ $food['id'] }}" type="text" class="form-control" placeholder="0"></input>
-                            <a href="{{ $food['url'] }}" class="btn btn-primary">View Page</a>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" data-dismiss="modal" aria-label="Close" class="btn btn-danger">Close</a>
+                            <a href="{{ $food['url'] }}" class="btn btn-primary">View Map</a>
                         </div>
                     </div>
                 </div>

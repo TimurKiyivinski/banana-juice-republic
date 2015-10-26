@@ -59,7 +59,7 @@ class MainController extends Controller
             break;
         case "details":
             $data['r_name'] = "Accommodations";
-            $data['r_url'] = url('/details');
+            $data['r_url'] = url('/accommodations', 'details');
             break;
         default:
             abort(404);
@@ -456,6 +456,15 @@ class MainController extends Controller
         $data = [];
         $data['title'] = "Contact Us";
         return view('contact', $data);
+    }
+
+    public function feedback()
+    {
+        $data = [];
+        $data['title'] = "User Feedback";
+        $data['r_name'] = "Home";
+        $data['r_url'] = url('/');
+        return view('feedback', $data);
     }
 
 }

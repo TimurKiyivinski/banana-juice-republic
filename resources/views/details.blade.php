@@ -23,7 +23,6 @@
                 <label for="form-origin">Nationality</label>
                 <input type="text" class="form-control" id="form-origin" placeholder="Nationality">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
         </form>
         <br />
         <div class="well col-xs-12">
