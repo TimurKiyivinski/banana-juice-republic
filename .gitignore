@@ -20,5 +20,5 @@ Homestead.json
 /public/js/
 /public/fonts/
 
-# Images
-/public/images/
+# Images. Stop ignoring since they are required to host correctly.
+# /public/images/
