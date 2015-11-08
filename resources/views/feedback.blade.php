@@ -2,7 +2,6 @@
 
 @section('head_extra')
     <link rel="stylesheet" href="{{ asset('css/summernote-bs3.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 @stop
 
 @section('content')
