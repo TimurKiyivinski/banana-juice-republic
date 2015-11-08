@@ -28,19 +28,19 @@
             Accommodation
             </a></li>
             <li><a href="{{ URL::to('/attraction') }}">
-            <span class="fa" aria-hidden="true"></span>
+            <span class="fa fa-map-marker" aria-hidden="true"></span>
             Attractions
             </a></li>
             <li><a href="{{ URL::to('/transport') }}">
-            <span class="fa" aria-hidden="true"></span>
+            <span class="fa fa-car" aria-hidden="true"></span>
             Transport
             </a></li>
             <li><a href="{{ URL::to('/food') }}">
-            <span class="fa" aria-hidden="true"></span>
+            <span class="fa fa-cutlery" aria-hidden="true"></span>
             Eateries
             </a></li>
             <li><a href="{{ URL::to('/contact') }}">
-            <span class="fa" aria-hidden="true"></span>
+            <span class="fa fa-phone" aria-hidden="true"></span>
             Contact Us
             </a></li>
         </ul>
