@@ -6,8 +6,77 @@
         <div class="page-header">
             <h1>Our Accommodation picks</h1>
         </div>
+        <div class="page-header">
+            <h3>Pullman Hotel</h3>
+        </div>
         <div  class="grid js-masonry">
-        @foreach($accommodations as $accommodation)
+        @foreach($pullmans as $accommodation)
+        <div class="col-xs-12 col-md-6 grid-item">
+            <div class="panel panel-info" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
+                <div class="panel-heading">
+                    <h4>{{ $accommodation['name'] }}</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-3">
+                        <img width="300" height="300" src="{{ $accommodation['photo'] }}" class="img-responsive" alt="Image missing :(">
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        {{ substr(strip_tags($accommodation['text']), 0, 60) }}...
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+        </div>
+        <div class="page-header">
+            <h3>Hilton Hotel</h3>
+        </div>
+        <div  class="grid js-masonry">
+        @foreach($hiltons as $accommodation)
+        <div class="col-xs-12 col-md-6 grid-item">
+            <div class="panel panel-info" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
+                <div class="panel-heading">
+                    <h4>{{ $accommodation['name'] }}</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-3">
+                        <img width="300" height="300" src="{{ $accommodation['photo'] }}" class="img-responsive" alt="Image missing :(">
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        {{ substr(strip_tags($accommodation['text']), 0, 60) }}...
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+        </div>
+        <div class="page-header">
+            <h3>Abell's Hotel</h3>
+        </div>
+        <div  class="grid js-masonry">
+        @foreach($abells as $accommodation)
+        <div class="col-xs-12 col-md-6 grid-item">
+            <div class="panel panel-info" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
+                <div class="panel-heading">
+                    <h4>{{ $accommodation['name'] }}</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-3">
+                        <img width="300" height="300" src="{{ $accommodation['photo'] }}" class="img-responsive" alt="Image missing :(">
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        {{ substr(strip_tags($accommodation['text']), 0, 60) }}...
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+        </div>
+        <div class="page-header">
+            <h3>Other Hotels</h3>
+        </div>
+        <div  class="grid js-masonry">
+        @foreach($others as $accommodation)
         <div class="col-xs-12 col-md-6 grid-item">
             <div class="panel panel-info" data-toggle="modal" data-target="#accommodationModal-{{ $accommodation['id'] }}">
                 <div class="panel-heading">
