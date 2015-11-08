@@ -15,6 +15,11 @@ body
     padding-bottom: $body-padding;
 }
 
+.panel:hover
+{
+    box-shadow: 5px 5px 5px #999;
+}
+
 .navbar-logo
 {
     height: $navbar-logo-height;
