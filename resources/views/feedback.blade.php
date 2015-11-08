@@ -45,7 +45,7 @@
                 </div>
             </div>
         </form>
-        <a href="{{ $r_url }}" class="btn btn-success btn-block">Continue to {{ $r_name}}</a>
+        <a href="{{ $r_url }}" class="btn btn-success btn-block">Submit and continue</a>
     </div>
 </div>
 @stop
