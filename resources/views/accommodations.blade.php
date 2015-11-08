@@ -75,9 +75,9 @@
             </div>
         </div>
         @endforeach
-        <div class="well col-xs-12">
-            <a href="{{ $r_url }}" class="btn btn-success btn-block">Continue to {{ $r_name}}</a>
-        </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom"><div class="col-xs-12">
+            <a href="{{ $r_url }}" class="btn btn-success btn-block navbar-btn">Continue to {{ $r_name}}</a>
+        </div></nav>
     </div>
 </div>
 @stop
