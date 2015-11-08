@@ -14,7 +14,7 @@
             <div class="form-group">
                 <label>Feedback</label>
                 <div class="form-control" id="summernote">
-                    Be honest.
+                    <h1>Your feedback here.</h2>
                 </div>
             </div>
             <div class="form-group">
