@@ -60,7 +60,7 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <input id="textbox-{{ $attraction['id'] }}" type="text" class="form-control" placeholder="Adults: 1"></input>
+                            <input id="textbox-{{ $attraction['id'] }}" type="text" class="form-control" placeholder="Number of adults"></input>
                         </div>
                         <div class="btn-group btn-group-justified">
                             <a href="#" data-dismiss="modal" aria-label="Reserve" class="btn btn-success">Reserve</a>

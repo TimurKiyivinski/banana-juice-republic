@@ -17,7 +17,8 @@ var paths = {
     'masonry': './node_modules/masonry-layout/',
     'imagesloaded': './node_modules/imagesloaded/',
     'summernote': './node_modules/summernote/',
-    'fontawesome': './node_modules/font-awesome/'
+    'fontawesome': './node_modules/font-awesome/',
+    'datepicker': './node_modules/bootstrap-datepicker/'
 }
 
 elixir(function(mix) {
@@ -31,6 +32,7 @@ elixir(function(mix) {
         paths.bootstrap + "javascripts/bootstrap.js",
         paths.masonry + "dist/masonry.pkgd.js",
         paths.imagesloaded + "imagesloaded.js",
-        paths.summernote + "dist/summernote.js"
+        paths.summernote + "dist/summernote.js",
+        paths.datepicker + "dist/js/bootstrap-datepicker.js"
     ], './public/js/app.js');
 });

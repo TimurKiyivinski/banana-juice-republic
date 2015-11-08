@@ -62,9 +62,9 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="From: dd/mm/yyyy"></input>
-                            <input type="text" class="form-control" placeholder="To: dd/mm/yyyy"></input>
-                            <input id="textbox-{{ $accommodation['id'] }}" type="text" class="form-control" placeholder="Amount: 1"></input>
+                            <input type="text" class="form-control datepicker" data-date-format="dd/mm/yyyy" placeholder="From: dd/mm/yyyy"></input>
+                            <input type="text" class="form-control datepicker" data-date-format="dd/mm/yyyy" placeholder="To: dd/mm/yyyy"></input>
+                            <input id="textbox-{{ $accommodation['id'] }}" type="text" class="form-control" placeholder="Number of people"></input>
                         </div>
                         <div class="btn-group btn-group-justified">
                             <a href="#" data-dismiss="modal" aria-label="Reserve" class="btn btn-success">Reserve</a>
@@ -80,4 +80,10 @@
         </div></nav>
     </div>
 </div>
+@stop
+
+@section('script_extra')
+<script type="text/javascript">
+$('.datepicker').datepicker();
+</script>
 @stop
