@@ -1,5 +1,5 @@
 # banana-juice-republic
-User Centred Design
+User Centred Design usability prototype. The code here is static and a huge mess. Proceed at your own sanity.
 
 # Dependencies
 * [Composer](https://getcomposer.org/)
